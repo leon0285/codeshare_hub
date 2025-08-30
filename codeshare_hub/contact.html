@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="contact-page">
+
+  <!-- Navigation -->
+  <div class="header">
+    <nav>
+      <a href="about.php" class="nav-link">About</a>
+      <a href="product.php" class="nav-link">Product</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="view_codes.html" class="nav-link">View Code</a>
+      <a href="post_code.html" class="nav-link">Posting</a>
+      <a href="main.html" class="nav-link logout-link">Log Out</a>
+    </nav>
+  </div>
+
+  <!-- Contact Form Section -->
+  <section class="contact">
+    <h1 class="contactname">Contact Us</h1>
+
+    <form action="submit_contact.php" method="post" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Send Message" />
+
+      <!-- Feedback confirmation message -->
+      <div class="feedback-msg">
+        <?php if (isset($_GET['success'])): ?>
+          <p class="success">✅ Thank you for your message!</p>
+        <?php elseif (isset($_GET['error'])): ?>
+          <p class="error">❌ Please fill in all fields correctly.</p>
+        <?php endif; ?>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+</body>
+</html>
+

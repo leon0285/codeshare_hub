@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About - CodeShare Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="header">
+    <nav>
+      <a href="about.php" class="nav-link">About</a>
+      <a href="product.php" class="nav-link">Product</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="view_codes.html" class="nav-link">View Code</a>
+      <a href="post_code.html" class="nav-link">Posting</a>
+      <a href="main.html" class="nav-link logout-link">Log Out</a>
+    </nav>
+  </div>
+
+  <div class="main-container">
+    <div class="box">
+      <h2>👥 About CodeShare Hub</h2>
+      <p>
+        We are a community of students and developers passionate about coding, 
+        collaboration, and learning by sharing.
+      </p>
+    </div>
+
+    <!-- Feedback form -->
+    <div class="box feedback-form">
+      <h3>📝 Leave Your Feedback</h3>
+      <form method="POST" action="about.php">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <textarea name="message" placeholder="Write your feedback..." required></textarea>
+        <label for="rating">⭐ Your Rating:</label>
+        <select name="rating" id="rating" required>
+          <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+          <option value="4">⭐⭐⭐⭐ Good</option>
+          <option value="3">⭐⭐⭐ Average</option>
+          <option value="2">⭐⭐ Poor</option>
+          <option value="1">⭐ Very Bad</option>
+        </select>
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </div>
+
+    <h2>💬 What Users Say</h2>
+    <!-- aici injectăm feedback-urile -->
+    <div id="dynamic-feedback"></div>
+  </div>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 CodeShare Hub. All rights reserved.</p>
+  </footer>
+</body>
+</html>

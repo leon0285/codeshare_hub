@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register - CodeShare Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="register-page">
+
+  <div class="header">
+    <nav>
+      <a href="about.php" class="nav-link">About</a>
+      <a href="product.php" class="nav-link">Product</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="view_codes.html" class="nav-link">View Code</a>
+      <a href="post_code.html" class="nav-link">Posting</a>
+      <a href="main.html" class="nav-link logout-link">Log Out</a>
+    </nav>
+  </div>
+
+  <div class="box">
+    <div class="login">
+      <div class="loginBx">
+        <h2><i class="fa-solid fa-user-plus"></i> Register <i class="fa-solid fa-heart"></i></h2>
+
+        <!-- Formularul trimite către register.php -->
+        <form action="register.php" method="post">
+          <div class="form-group">
+            <input type="text" name="fullname" placeholder="Full Name" required>
+            <input type="text" name="username" placeholder="Username" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+          </div>
+          <div class="form-group">
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+          </div>
+          <input type="submit" value="Register">
+          <div class="form-options">
+            <a href="index.php" class="register-btn">Back to Login</a>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+</body>
+</html>
